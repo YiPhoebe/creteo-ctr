@@ -1,0 +1,25 @@
+# Basic config for streaming Criteo 1TB via Hugging Face Datasets
+dataset: criteo/CriteoClickLogs
+splits:
+  train: train
+  val: validation
+  test: test
+
+# Sampling size for quick stats estimation on dense features
+sample_size: 100000
+
+# Data processing
+bucket_size_default: 1000003
+batch_size: 2048
+epochs: 3
+num_workers: 0
+
+# Model
+model: deepfm  # options: logistic|deepfm|dlrm
+emb_dim: 16
+learning_rate: 0.001
+
+# Logging
+log_interval: 100
+seed: 42
+
